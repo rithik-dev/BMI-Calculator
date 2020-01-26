@@ -148,6 +148,11 @@ class _InputPageState extends State<InputPage> {
                                     weight--;
                                   });
                                 },
+                                onLongPress: () {
+                                  setState(() {
+                                    weight -= 10;
+                                  });
+                                },
                               ),
                               SizedBox(width: 10.0),
                               RoundIconButton(
@@ -155,6 +160,11 @@ class _InputPageState extends State<InputPage> {
                                 onPressed: () {
                                   setState(() {
                                     weight++;
+                                  });
+                                },
+                                onLongPress: () {
+                                  setState(() {
+                                    weight += 10;
                                   });
                                 },
                               ),
@@ -188,16 +198,25 @@ class _InputPageState extends State<InputPage> {
                                     age--;
                                   });
                                 },
-                              ),
-                              SizedBox(width: 10.0),
-                              RoundIconButton(
-                                icon: FontAwesomeIcons.plus,
-                                onPressed: () {
+                                onLongPress: () {
                                   setState(() {
-                                    age++;
+                                    age -= 10;
                                   });
                                 },
                               ),
+                              SizedBox(width: 10.0),
+                              RoundIconButton(
+                                  icon: FontAwesomeIcons.plus,
+                                  onPressed: () {
+                                    setState(() {
+                                      age++;
+                                    });
+                                  },
+                                  onLongPress: () {
+                                    setState(() {
+                                      age += 10;
+                                    });
+                                  }),
                             ],
                           )
                         ],

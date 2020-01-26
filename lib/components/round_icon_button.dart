@@ -4,8 +4,9 @@ import 'package:bmi_calculator/utilities/constants.dart';
 class RoundIconButton extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
+  final Function onLongPress;
 
-  RoundIconButton({@required this.icon, @required this.onPressed});
+  RoundIconButton({@required this.icon, @required this.onPressed,this.onLongPress});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class RoundIconButton extends StatelessWidget {
       ),
       elevation: 6.0,
       onPressed: onPressed,
+      onLongPress: onLongPress,
       shape: CircleBorder(),
       fillColor: kRoundIconButtonColor,
     );
